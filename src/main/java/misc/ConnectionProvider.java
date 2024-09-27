@@ -7,7 +7,7 @@ public class ConnectionProvider {
 
 	//Update these attributes as per your local MySQL database
 	private static String username = "root";
-	private static String password = "taj325";
+	private static String password = "";
 	private static int port = 3306;
 	private static String host = "localhost";
 	private static String database = "mvcsample";
