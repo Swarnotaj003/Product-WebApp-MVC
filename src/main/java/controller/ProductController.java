@@ -47,9 +47,13 @@ public class ProductController extends HttpServlet {
 		
 		ProductDao pd = new ProductDao();
 		int status = pd.insert(pb);
-		if (status != 0)
-			request.setAttribute("productAdded", true);
-		response.sendRedirect("add_product.jsp");	
+		if (status != 0) {
+			request.setAttribute("addStatus", "success");
+			response.sendRedirect("add_product.jsp");
+		}
+		else {
+			response.sendRedirect("add_product.jsp");	
+		}
 	}
 
 }

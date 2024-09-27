@@ -8,9 +8,13 @@
 </head>
 <body>
 <h1>Add Product :</h1>
-<% if (request.getAttribute("productAdded") != null) { %>
-   <h3>Product added successfully!</h3>
-<% } %>
+<%
+    if(request.getParameter("addStatus") != null && request.getParameter("addStatus").equals("success")) {
+%>
+        <h3>Product added successfully!</h3>
+<%
+    }
+%>
 <form action = "ProductController" method="post">
 	<label>Product Id:</label>
 	<input type="text" name="pid"><br>
