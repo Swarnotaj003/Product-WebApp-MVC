@@ -19,8 +19,14 @@ git clone https://github.com/Swarnotaj003/Product-WebApp-MVC.git
 ```
 
 ## Local Database
-Update the password and any other relevant details as per your local MySQL database in the [`ConnectionProvider.java` file]()
+Update the password and any other relevant details as per your local MySQL database in the [`ConnectionProvider.java`](src/main/java/misc/ConnectionProvider.java)
 ```
+//Update these attributes as per your local MySQL database
+	private static String username = "root";
+	private static String password = "";
+	private static int port = 3306;
+	private static String host = "localhost";
+	private static String database = "mvcsample";
 ```
 
 Run the following MySQL commands in your local device before executing
