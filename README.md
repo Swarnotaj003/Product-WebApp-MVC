@@ -1,14 +1,15 @@
 # Product WebApp MVC
 
 ## Objective
-To implement a simple web based application that follows `MVC architecture` & study its benefits
+To implement a simple web based application that follows `MVC architecture` & understand its benefits
 
 ## Features
 - Login
 - Add Product
+- View Product
 
 ## Tech Stack
-- `Frontend` : JSP (HTML with Embedded Java), CSS
+- `Frontend` : JSP (HTML with embedded Java), CSS
 - `Backend` : Java Servlets
 - `Database` : MySQL, JDBC
 
