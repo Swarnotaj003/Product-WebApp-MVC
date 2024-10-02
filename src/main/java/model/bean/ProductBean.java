@@ -8,6 +8,19 @@ public class ProductBean {
 	private double price;
 	private String image;
 	
+	public ProductBean() {
+	}
+
+	public ProductBean(String id, String name, String category, int qty, double price, String image) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.category = category;
+		this.qty = qty;
+		this.price = price;
+		this.image = image;
+	}
+	
 	public String getId() {
 		return id;
 	}

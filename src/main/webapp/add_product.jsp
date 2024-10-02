@@ -1,20 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<% String str=request.getParameter("msg"); %>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Product WebApp : Add Product</title>
 </head>
+
 <body>
 <h1>Add Product :</h1>
-<%
-    if(request.getParameter("addStatus") != null && request.getParameter("addStatus").equals("success")) {
-%>
-        <h3>Product added successfully!</h3>
-<%
-    }
-%>
+<% if("valid".equals(str)) { %>
+	<h3>Product Added Sucessfully!</h3>
+<% } if("invalid".equals(str)) { %>
+	<h3>There is an issue!!</h3>
+<% } %>
 <form action = "ProductController" method="post">
 	<label>Product Id:</label>
 	<input type="text" name="pid"><br>

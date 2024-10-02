@@ -29,13 +29,12 @@ public class ProductController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String id=request.getParameter("pid");
-		String name=request.getParameter("pname");
-		String category=request.getParameter("pcategory");
-		int qty=Integer.parseInt(request.getParameter("pqty"));
-		double price=Double.parseDouble(request.getParameter("pprice"));
-		String image=request.getParameter("pimage");
-//		System.out.println(ConnectionProvider.createCon());
+		String id = request.getParameter("pid");
+		String name = request.getParameter("pname");
+		String category = request.getParameter("pcategory");
+		int qty = Integer.parseInt(request.getParameter("pqty"));
+		double price = Double.parseDouble(request.getParameter("pprice"));
+		String image = request.getParameter("pimage");
 		
 		ProductBean pb = new ProductBean();
 		pb.setId(id);
@@ -48,11 +47,10 @@ public class ProductController extends HttpServlet {
 		ProductDao pd = new ProductDao();
 		int status = pd.insert(pb);
 		if (status != 0) {
-			request.setAttribute("addStatus", "success");
-			response.sendRedirect("add_product.jsp");
+			response.sendRedirect("add_product.jsp?msg=valid");
 		}
 		else {
-			response.sendRedirect("add_product.jsp");	
+			response.sendRedirect("add_product.jsp?msg=invalid");	
 		}
 	}
 

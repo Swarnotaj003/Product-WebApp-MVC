@@ -9,20 +9,21 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="css/adm_nav.css" />
     <style>
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 40%;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.container {
-  padding: 2px 16px;
-}
-</style>
+		.card {
+		  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		  transition: 0.3s;
+		  width: 40%;
+		  display: inline-block;
+		}
+		
+		.card:hover {
+		  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		}
+		
+		.container {
+		  padding: 2px 16px;
+		}
+	</style>
 </head>
 <body>
  
@@ -57,6 +58,16 @@
    </a>
   </div>
 </div>
+
+<div class="card">
+
+  <img src="images/view_logo.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+  <a href="ProdViewController">
+    <b>View Item</b>
+   </a>
+  </div>
+  </div>
 
 </body>
 </html>
